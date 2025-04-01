@@ -28,7 +28,7 @@ console.log(myName); // Output: Dhruv (because myName is not changed)
 
  usertwo.email = "mera@google.com"; // changing the value of usertwo.email
  console.log(userOne.email);// so here we changes the value of usertwo.email and it will also change the value of userOne.email because they are pointing to the same object in heap memory
- console.log(usertwo.email);//Output will be mera@google.com
+ console.log(usertwo.email);//Output will be mera@google
  
  
 
