@@ -1,4 +1,4 @@
-const myArr = [0,1,2,3,4,5,true,"jitesh"];
+const myArr = [0,1,2,3,4,5,true,"Hemant"];
 console.log(myArr); // it will give the array in the format of [0,1,2,3,4,5,true,"jitesh"] as output and the type of this was object;
 console.log(typeof myArr);  // it will give the type of this was object;
 
