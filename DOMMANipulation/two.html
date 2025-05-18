@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">Learning dom <span style="display: none"> With mE</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <script>
+        // in console of this page you can see the document object
+        // and you can see the elements of this page
+        console.log(document.getElementById('title'));
+         // this will give you the element with id title
+        console.log(document.getElementById('title').id );
+        // this will give you the id of the element
+        console.log(document.getElementById('title').class);
+         // this will give undefined
+        console.log(document.getElementById('title').className);
+         // this will give you the class of the element
+         console.log(document.getElementById('title').getAttribute('id'));// Another way to find id or class
+
+        //  if we have to set the id or class of the element
+        document.getElementById('title').setAttribute('id','newTitle');
+        // by this our id will be changed to newTitle
+
+        const title = document.getElementById('newTitle');
+        title.style.color = 'red';
+        title.style.backgroundColor = 'blue';
+        title.style.fontSize = '50px';
+
+        // this will change the color of the title to red you can literrally made chages on the page  by help of dom
+
+        // Getting the contents from that element
+        // textContent , innerText , innerHTML
+        console.log(title.textContent);
+        console.log(title.innerText);
+        // these two will give the same text on normal element but if you apply any css which is hidden or not visible then textContent is Unable to get that text
+        // but innerText will give you the text which is visible on the page
+        // After mading changes in our html page 
+        console.log(title.innerHTML); // this will give you the html content of the element
+        // The output should be 
+        // Learning dom  With mE
+        // Learning dom
+        // Learning dom <span style="display: none"> With mE</span>
+        
+         
+    </script>
+</body>
+</html>
+
+<!-- we can perform DOM operation's in a script file or a script tag  -->
