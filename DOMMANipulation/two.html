@@ -15,7 +15,20 @@
 <body class="bg-black">
     <div >
         <h1 id="title" class="heading">Learning dom <span style="display: none"> With mE</span></h1>
+        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.8</h2>
+        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.8</h2>
+        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.8</h2>
+        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.8</h2>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <input type="password">
+
+
+        <ul>
+            <li class="List">one</li>
+            <li class="List">Two</li>
+            <li class="List">Three</li>
+            <li class="List">Four</li>
+        </ul>
     </div>
     <script>
         // in console of this page you can see the document object
@@ -54,9 +67,61 @@
         // Learning dom
         // Learning dom <span style="display: none"> With mE</span>
         
-         
+        // we can also perform operation by document.getElementsByClassName
+        console.log(document.getElementsByClassName('heading'));// this will give you the html collection of all the elements with that class name
+        // this is not an array it is an HTMLCollection
+        // so we can not use forEach or other type of operations perform in array here 
+        console.log(document.getElementsByClassName('List'));//this will give you the html collection of all the elements with that class name which is not array so we are not able to use forEach or other type of operations perform in array here
+        // but we can convert this collection to array by using Array.from() or spread operator
+        const l = document.getElementsByClassName('List');
+        Array.from(l).forEach((li)=>{
+            li.style.color = 'red';// this will change the color of all the elements of the list to red
+        })
+
+        
+
+
+        // *********************************QuerySelector and querySelectorAll*********************************
+        // By class name or by id
+        console.log(document.querySelector('.heading'));// this will give you the first element with that class name
+        console.log(document.querySelector('#newTitle'));// this will give you the first element with that id
+        console.log(document.querySelector('input[type="password"]'));
+        
+        console.log(document.querySelector('h1'));// this will give you the first element with that key
+        console.log(document.querySelector('h2')); // only first element is logged  here
+        
+        // changing the color of first item of list by querySelector
+        const list = document.querySelector('ul');
+        console.log(list.querySelector('li'));// this will give you the first element with that tag name
+        const ChangeColor = list.querySelector('li');
+        ChangeColor.style.color = 'red';// this will change the color of the first element of the list to red
+
+        // Or we can directly do the same by this
+        document.querySelector('ul li').style.color = 'red';
+
+        ChangeColor.innerText = "I am changed";
+
+        // When we have to select all the elements with that class name
+        // we can use querySelectorAll
+
+        console.log(document.querySelectorAll('li'));// this will give you the nodelist of all the elements with that tag name
+
+        const tempList = document.querySelectorAll('li');
+        //  we cant do by this way as this is not an array
+        // tempList.style.color = 'green';// this will give you an error
+        // so we can do this by this way providing index 
+        tempList[0].style.color = 'green';// this will change the color of the first element of the list to green
+
+        // or we can do this by using forEach
+
+        tempList.forEach((li)=>{
+            li.style.color = 'green';// this will change the color of all the elements of the list to green
+        })
+        
     </script>
 </body>
 </html>
 
 <!-- we can perform DOM operation's in a script file or a script tag  -->
+
+<!-- These all were the basic of performing manipulation by DOM You can try it with different pages like WikiPedia or some others -->
