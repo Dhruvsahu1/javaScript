@@ -26,7 +26,7 @@ const myNums = [1,2,3,4,5,6,7,8,9,10];
 // for the correction just apply return satetment before the condition.
 // Try it with yourself
 
-// We van do the same by using forEach loop
+// We can do the same by using forEach loop
 const newNum = [];
 myNums.forEach((val)=>{
     if(val>4){
