@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing in DOM</title>
+</head>
+<body style="background-color: black;color:white">
+    <div class="parent">
+        <div class="month">Jan</div>
+        <div class="month">Feb</div>
+        <div class="month">March</div>
+        <div class="month">April</div>
+    </div>
+    
+</body>
+
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent); // it will give you the parent element
+    console.log(parent.children); // it will give you the children of the parent element in the form of HTMLCollection
+    console.log(parent.children[0]); // it will give you the first child of the parent element
+    console.log(parent.children[0].innerHTML); // it will give you the html content of the first child
+    
+    console.log(parent.children[0].nextElementSibling); // it will give you the next sibling of the first child
+    console.log(parent.children[3].previousElementSibling); // it will give you the previous sibling of the first child
+    console.log(parent.firstElementChild); // it will give you the first child of the parent element
+    console.log(parent.lastElementChild); // it will give you the last child of the parent element
+
+
+    // we can apply loop on the children of the parent element
+    for(let i = 0; i < parent.children.length; i++){
+        console.log(parent.children[i].innerHTML); // it will give you the html content of the first child
+    }
+    parent.children[1].style.color = 'red'; // it will change the color of the second child to red
+
+
+    const firstMonth = document.querySelector('.month');
+    console.log(firstMonth); 
+    console.log(firstMonth.parentElement); // it will give you the parent element of the first child
+
+    console.log("NODES : ", parent.childNodes); // it will give you the child nodes of the parent element in the form of NodeList
+    
+    
+</script>
+</html>
+<!-- HERE is all basic things to access in html page by using dom -->
