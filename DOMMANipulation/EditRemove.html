@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+</head>
+<body style="background-color: #212121 ; color: #fff;">
+    <ul >
+        <li >Java</li>
+    </ul>
+    
+</body>
+<script>
+    // Write Function to add element in this list
+    document.querySelector('ul').setAttribute('class',"languages");
+    function addLanguage(language){
+        const li = document.createElement('li');
+    li.innerHTML = `${language}`;
+    document.querySelector('.languages').appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('JavaScript');
+    // But this method is not more effiecient because we have to traverse the whole tree for creating element so this is expensive method
+
+    // more efficient way is to use document fragment to create multiple elements at once and then append it to the parent element
+
+    function addLanguageOpti(language){
+        const li = document.createElement('li');
+        const addTxt = document.createTextNode(language);
+        li.appendChild(addTxt);
+        document.querySelector('.languages').appendChild(li);
+    }
+    addLanguageOpti('C++');
+    addLanguageOpti('Ruby');    
+    // here we are not traversing whole tree and creating element one by one, so this is more efficient method we are acccessing the parent element only once and then appending the child elements to it
+
+    // *************************EDIT THE ELEMENT*************************
+    const firstLang = document.querySelector('li:nth-child(1)');
+    // firstLang.innerHTML = 'Java 8'; // here we are editing through innerHTML property
+    // ? another appproch by creating new element and replacing the old one
+    const newLi = document.createElement('li');
+    newLi.textContent = 'Java 8';
+    firstLang.replaceWith(newLi)
+
+    // ? another approach is to create a new element.
+
+    const secondLang = document.querySelector('li:nth-child(2)');
+    secondLang.outerHTML = '<li>golang </li>'; // here we are replacing the whole element with new element
+
+    // *************************REMOVE THE ELEMENT*************************
+
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove(); // here we are removing the last child element of the parent element
+</script>
+</html>
