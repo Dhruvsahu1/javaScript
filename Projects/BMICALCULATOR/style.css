@@ -1,0 +1,29 @@
+.body{
+    background-color: #212121;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.head{
+    text-align: center;
+}
+.heading{
+    text-align: center;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    background-color: rgb(108, 40, 40);
+    padding: 10px;
+    border-radius: 10px;
+  }
+.head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Center vertically */
+      
+}
