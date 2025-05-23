@@ -1,0 +1,34 @@
+.body{
+    background-color: #212121;
+    color: aliceblue;
+}
+.box{
+    background-color: rgb(46, 44, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.heading{
+    text-align: center;
+}
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#sub{
+    background-color: rgb(48, 76, 174);
+    border-radius: 6px;
+    height: 30px;
+}
+.footer{
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+
+}
