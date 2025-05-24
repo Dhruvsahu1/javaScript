@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Studying</title>
+</head>
+<body style="background-color: #212121; color: aqua;">
+    <h2>Images</h2>
+    <div class="image">
+        <ul class="images">
+            <li style="list-style: none;"><img width="200px" id="horse" src="horse.avif" alt="horse"></li>
+            <li style="list-style: none;"><img width="200px" id="hummingBird" src="hummingbird-wide.jpg" alt="hummingBird"></li>
+            <li style="list-style: none;"><img width="200px" id="Tree" src="images.jpeg" alt="Tree"></li>
+            <li style="list-style: none;"><img width="200px" id="elephant" src="img-elephant-1600-1024x576.jpg" alt="elephant"></li>
+            <li style="list-style: none;"><img width="200px" id="flamingo" src="very-large-flamingo.jpg" alt="flamingo"></li>
+            <li style="list-style: none;"><a id="google" href="https://www.google.com/"> go toGoogle</a></li>
+        </ul>
+        
+    </div>
+</body>
+<script>
+    // Applying event listeners to the images
+    // this is the old way of adding event listeners to the images.
+    // document.getElementById("horse").onclick = function(e){
+    //     alert("Horse clicked")
+        
+    // }
+
+    // Another way of adding event listeners to the images.
+
+
+    // document.getElementById("horse").addEventListener("click",function(e){
+    //     console.log(e.target.id);// this e event give you all the information about the element that was clicked
+        
+    // },false)
+    // lets break the structure of the code.
+    // document.getElementById => this will allow you to select the element by its id.
+    // addEventListener => this will allow you to add an event listener to the selected element.
+    // "click" => this is the event that we want to listen to.
+    // function(e) => this is the function that will be executed when the event is triggered.
+    //  false => this is the third parameter of the addEventListener function. It is used to specify whether the event listener should be executed in the capturing or bubbling phase.
+    // this is basically for event propagation.
+
+
+    // QUESTION 
+    // get the time when the image was clicked.
+    // SOLUTION
+    // document.getElementById("horse").addEventListener("click",function(e){
+    //     const time  = new Date()
+    //     console.log(time.toLocaleTimeString());
+    // },false)
+
+    // Another Way for acheiving the same result.
+    // timeStamp. present in e event object.
+    // document.getElementById("horse").addEventListener("click",function(e){
+    //     const time  = new Date(performance.timing.navigationStart + e.timeStamp)
+    //     console.log(time.toLocaleTimeString());
+    // },false)
+    // performance.timing.navigationStart => this is the time when the page was loaded.
+    // e.timeStamp => this is the time when the event was triggered.
+    // performance.timing.navigationStart + e.timeStamp => this is the total time when the event was triggered.
+    // then convert in toLocaleTimeString() format.
+
+    // ***********Things we have to studied for understanding the event object***********
+    // type , timeStamp , preventDefault() , stopPropagation() , target , currentTarget , relatedTarget , bubbles , cancelable , detail ,client x , client y , offset x , offset y , screen x , screen y , x , y , altKey,ctrlKey etc
+
+    
+</script>
+</html>

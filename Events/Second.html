@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Studying</title>
+</head>
+<body style="background-color: #212121; color: aqua;">
+    <h2>Images</h2>
+    <div class="image">
+        <ul class="images">
+            <li style="list-style: none;"><img width="200px" id="horse" src="horse.avif" alt="horse"></li>
+            <li style="list-style: none;"><img width="200px" id="hummingBird" src="hummingbird-wide.jpg" alt="hummingBird"></li>
+            <li style="list-style: none;"><img width="200px" id="Tree" src="images.jpeg" alt="Tree"></li>
+            <li style="list-style: none;"><img width="200px" id="elephant" src="img-elephant-1600-1024x576.jpg" alt="elephant"></li>
+            <li style="list-style: none;"><img width="200px" id="flamingo" src="very-large-flamingo.jpg" alt="flamingo"></li>
+            <li style="list-style: none;"><a id="google" href="https://www.google.com/"> go toGoogle</a></li>
+        </ul>
+        
+    </div>
+</body>
+<script>
+    // About event propagation Event bubbling and capturing
+    // Event bubbling: When an event is triggered on an element, it first goes to its parent element and then to its parent's parent and so on until it reaches the document root.
+    // In simple Words like bubbles from down to top .
+    // Event capturing: When an event is triggered on an element, it first goes to the element itself and then to its child elements and then to its parent's child elements and so on until it reaches the document root.
+    // in simple Words like capture from top to down.
+
+    // EXAMPLES.
+
+    // document.querySelector(".images").addEventListener("click" , function(e){
+    //     console.log("Inside ul element");
+        
+    // }, false);
+
+    // document.getElementById("horse").addEventListener("click" , function(e){
+    //     console.log("horse clicked");
+    // }, false);
+
+    // here in this example if you clicked any element except the horse id element then you get inside ul element it's obvious but if you clicked on horse id  element then the question arises which log will be printed first.
+    // Answer: The log will be printed first the horse id element then the images class element because the event is bubbling.
+    // this is because of event propagation.
+
+    // if we do same thing but with capturing then the log will be printed first the images class element then the horse id element because the event is capturing.
+    //  document.querySelector(".images").addEventListener("click" , function(e){
+    //     console.log("Inside ul element");
+        
+    // }, true);
+
+    // document.getElementById("horse").addEventListener("click" , function(e){
+    //     console.log("horse clicked");
+    // }, true);
+    // this is the type of useCase we need.
+
+    // Some time we need to stop the event propagation.
+
+
+    //  document.querySelector(".images").addEventListener("click" , function(e){
+    //     console.log("Inside ul element");
+        
+    // }, false);
+
+    // document.getElementById("horse").addEventListener("click" , function(e){
+    //     console.log("horse clicked");
+    //     e.stopPropagation(); // this will stop the event propagation.
+    // }, false);
+    // only output is owl Clicked.
+
+
+    // preventDefault() method => this , it is used to prevent the default behavior of an event.
+    // Example of preventDefault() method.
+
+
+    // document.getElementById("google").addEventListener("click" , function(e){
+    //     console.log("Google  clicked");
+    //     e.stopPropagation();
+    //     e.preventDefault(); // this will prevent the default behavior of the link.
+    // // }, false);
+
+
+    // ***********************INTERVIEW QUESTION******************
+    // Question: Whenever we click on an list item that item will be removed from the list. How can we achieve this functionality using JavaScript?
+    // SOLUTION =>
+
+    document.querySelector(".images").addEventListener("click",function(e){
+        // console.log(e.target.parentNode);
+
+        // let removed = e.target.parentNode;
+        // removed.remove();
+        //  but remember this is not the solution because if you clicked on the ul or any other element then the entire list will be removed.
+        // so
+        console.log(e.target.tagName);
+        if(e.target.tagName === "IMG"){
+            let removed = e.target.parentNode;
+            removed.remove();
+        }
+        
+    },false)
+    //  this is the solution for this problem.
+
+</script>
+</html>
