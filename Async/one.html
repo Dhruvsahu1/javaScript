@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval&setTimeOut</title>
+</head>
+<body style="background-color: #212121; color: aqua;">
+    <h1> Hello We are learning setTimeOut and SetInterval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+
+    // setTimeOut => it is a function to run asynchronus code in our project and perform a task after the completion of specific time given.
+    // The syntax is 
+    // setTimeout(function(){
+    //     console.log('hello I am setTimeout');
+    // },1000)
+    // here time is given in miliseconds 1000 ms means 1 sec
+    // you can pass a refrence of function here also
+    // const hello = function(){
+    //     console.log('hello I am setTimeout');
+    // }
+    // setTimeout(hello,1000);
+    // function hello(){
+    //     console.log('hello I am setTimeout');
+    // }
+    // setTimeout(hello,1000);
+    // make sure you pass refrence only not execution because it executes  immeddiately
+
+
+
+    // setInterval => this function helps to perform a specifc task on specific time repeateadily
+    // the syntax is
+    // setInterval(function(){
+    //     console.log("hello i am setInterval",Date.now());
+        
+    // },3000)
+    // it runs code and log the value in 3 sec
+
+    // in set interval we can also pass params also examples
+    // const sayDate = function(str){
+    //     console.log(`${str}`,Date.now());
+    // }
+    // setInterval(sayDate,2000,"hi");
+
+    // TASK 1
+    // Change the heading to completed learning about setTimeOut&setTimeInterval after 2 sec
+
+    // const h1 = document.querySelector('h1');
+    // function changeValue(){
+    //     h1.innerHTML = "hurrah! we completed learning SetTimeOut&setInterval"
+    // }
+    // const changeME = setTimeout(changeValue,2000);
+
+
+    // clearTimeOut => it's need a reference of setTImeOut function to clear Its time and stop the working of it.
+    // document.querySelector("#stop").addEventListener("click",function(){
+    //     clearTimeout(changeME);
+    //     console.log("here we stopped it's working ");
+        
+    // })
+
+    // just like clearTImeout there was clearInterval and the us eis same.
+
+    
+
+    
+</script>
+</html>
