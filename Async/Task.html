@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white">
+    <h1>Task 1 :- start and stop timer </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const start  = document.getElementById('start');
+    const stop = document.getElementById('stop');
+    function hello(){
+        const date = new Date();
+        console.log("hello Dhruv at " + date.toLocaleTimeString());
+    }
+    let interval;
+    start.addEventListener('click',()=>{
+       interval =  setInterval(hello,1000);
+    })
+    stop.addEventListener('click',()=>{
+        clearInterval(interval);
+    })
+</script>
+</html>
