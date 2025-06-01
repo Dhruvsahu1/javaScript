@@ -25,3 +25,49 @@ const user  = {
 
 user.getUserDetails()
 console.log(this); // if you use this here it will give blank object but in browser it will give window obkect.
+
+
+// CONSTRUCTOR Function 
+// [new] keyWord is a constructor function
+// const date  = new Date();  here new is a constructor function
+
+// function userco(userName,loginCount,isLoggedin){
+//     this.userName = userName;
+//     this.loginCount = loginCount;
+//     this.isLoggedin = isLoggedin
+
+//     return this;
+// }
+
+// const userOne = userco("Hello",23,true);
+// console.log(userOne);// here you get the output but is you pass another argument like the given example 
+// const userTwo = userco("Namaste",2,false)
+// console.log(userOne);// here you see that value will be overwrite for userOne and as a developer we don't want this
+// // so for overcome from this problem we use constructor function
+
+// const userOne = new userco("hello",23,true);
+// const userTwo = new userco("namste",43,false);
+// console.log(userOne);
+// console.log(userTwo);
+
+
+function userco(userName,loginCount,isLoggedin){
+    this.userName = userName;
+    this.loginCount = loginCount;
+    this.isLoggedin = isLoggedin
+
+    this.greetings = function(){
+        console.log(`welcomr ${this.userName}`);
+        
+    }
+    return this;
+}
+
+const userOne = new userco("hello",23,true);
+const userTwo = new userco("namste",43,false);
+console.log(userOne);
+console.log(userTwo);
+
+console.log(userOne.constructor); // this will give this as output [Function: userco]
+
+
