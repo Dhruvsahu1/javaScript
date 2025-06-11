@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Bind</title>
+</head>
+<body>
+    <button>Button Click</button>
+</body>
+<Script>
+    // class React{
+    //     constructor(){
+    //         this.library = "React";
+    //         this.server = "htttps://localHost:3000";
+
+    //         document.querySelector("button").addEventListener("click",this.handleClick)
+    //     }
+    //     handleClick(){
+    //         console.log("Button Clicked");
+    //         console.log(this.library);
+    //         console.log(this.server);
+    //         console.log(this);
+            
+            
+    //     }
+    // } in this code you will see that library and server are undefined because the context of this is lost when the function is called as an event handler. To fix this, we can use the bind method to bind the context of this to the handleClick function.
+    class React{
+        constructor(){
+            this.library = "React";
+            this.server = "htttps://localHost:3000";
+
+            document.querySelector("button").addEventListener("click",this.handleClick.bind(this))
+        }
+        handleClick(){
+            console.log("Button Clicked");
+            console.log(this.library);
+            console.log(this.server);
+            console.log(this);
+            
+            
+        }
+    }
+
+    const app = new React();
+</Script>
+</html>
