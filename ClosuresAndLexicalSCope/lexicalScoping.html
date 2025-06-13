@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure And Lexical Scoping</title>
+</head>
+
+<body style="background-color: #313131;">
+
+</body>
+<script>
+     // function init() {
+    //      let userName = "Hulk"; // name is a local variable created by init
+    //      function displayName() {
+
+    //        console.log(userName); // we are trying to access the variable declared in the outer function
+    //      }
+    //   displayName();
+    // }
+    // init(); // this concept is lexical scoping where you have access to the variables of the outer function from the inner function.
+    // console.log(userName) here it shows error out of scope because userName is not defined in this scope.
+
+
+    // Another example of lexical scoping
+    // function outer() {
+    //     // let Username = "Iron MAn";
+    //     // function inner() {
+    //     //     let check = true;
+    //     //     console.log("inner function: " + Username); // accessing the variable from the outer function
+    //     // }
+       
+    //     // inner(); // calling the inner function
+    //     //  function tooInner() {
+           
+    //     //     console.log("too inner function: " + check); // accessing the variable from the outer function
+    //     // }
+    //     // tooInner();
+    // }
+    // outer(); // calling the outer function
+    // console.log("Too outer function: " + Username); // this will throw an error because name is not defined in this scope.
+
+    // So in this examples we see function can access the variables of its outer function but not the sibling functions.
+
+</script>
+
+<script>
+    // Closures
+
+    function makeFunc(){
+        const name = "Hulk"; // this is a variable that is defined in the outer function
+        function displayName() {
+            console.log(name); // this inner function can access the variable from the outer function
+        }
+        return displayName; // this function returns the inner function
+    }
+    const myFunc = makeFunc(); // this will call the outer function and return the inner function
+    myFunc(); // this will call the inner function and print the value of the variable from the outer function.
+
+    //  here we will see the closure in action the working of memory and how the inner function retains access to the outer function's variables even after the outer function has finished executing. 
+    //  because on line number 58 we are wxecuting the makefunc and we all know after executing the function it;s scope will deleted so we are storing it in memory and we can access it from the myfunc reference.
+</script>
+
+</html>
