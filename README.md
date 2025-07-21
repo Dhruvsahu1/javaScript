@@ -37,28 +37,28 @@ This is a beginner-friendly guide to learning JavaScript step-by-step. Whether y
      - 4. Some topics include mini exercises or projects — feel free to practice!
 
   ##💡 Tips for Beginners
-     - 1.  Don't copy–paste. Type the code to improve muscle memory.
-     - 2.  Use console.log() frequently to debug and understand flow.
-     - 3.  Refer to MDN Web Docs for deeper understanding.
-     - 4.  Don’t skip DOM or Async JS — they are very important!
+     -   Don't copy–paste. Type the code to improve muscle memory.
+     -   Use console.log() frequently to debug and understand flow.
+     -   Refer to MDN Web Docs for deeper understanding.
+     -   Don’t skip DOM or Async JS — they are very important!
 
   #🙌 Contributions
-      - 1. If you find something missing or want to add your own examples, feel free to contribute:
-      - 2. Fork the repository
-      - 3. Create your feature branch: git checkout -b feature-name
-      - 4. Commit your changes: git commit -m "Add something"
-      - 5. Push to the branch: git push origin feature-name
-      - 6. Open a Pull Request
+      -  If you find something missing or want to add your own examples, feel free to contribute:
+      -  Fork the repository
+      -  Create your feature branch: git checkout -b feature-name
+      -  Commit your changes: git commit -m "Add something"
+      -  Push to the branch: git push origin feature-name
+      -  Open a Pull Request
 
   #📧 Contact
-      - 1. If you have any suggestions or questions, feel free to reach out:
-      - 2. GitHub: Dhruvsahu1
-      - 3. LinkedIn: https://www.linkedin.com/in/dhruv-sahu-aa5124247/
+      -  If you have any suggestions or questions, feel free to reach out:
+      -  GitHub: Dhruvsahu1
+      -  LinkedIn: https://www.linkedin.com/in/dhruv-sahu-aa5124247/
 
   #🌟 Show Your Support
-      - 1.  If this helps you learn JavaScript:
-      - 2. ⭐ Star the repo
-      - 3. 🍴 Fork it
-      - 4. 🔄 Share it
+      -   If this helps you learn JavaScript:
+      -  ⭐ Star the repo
+      -  🍴 Fork it
+      -  🔄 Share it
 
 Happy Coding! 🚀
