@@ -62,14 +62,16 @@ This is a beginner-friendly guide to learning JavaScript step-by-step. Whether y
     ```bash
     git push origin feature-name
 
+---
 
-
-  #📧 Contact
+## 📧 Contact
       -  If you have any suggestions or questions, feel free to reach out:
       -  GitHub: Dhruvsahu1
       -  LinkedIn: Dhruv Sahu
 
-  #🌟 Show Your Support
+---
+
+##  🌟 Show Your Support
       -   If this helps you learn JavaScript:
       -  ⭐ Star the repo
       -  🍴 Fork it
